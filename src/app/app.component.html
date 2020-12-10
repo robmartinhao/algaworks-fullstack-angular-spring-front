@@ -48,8 +48,8 @@
             <td class="col-valor-content" [ngStyle]="{ color: lancamento.tipo === 'DESPESA' ? 'red' : 'blue'}">
               {{ lancamento.valor }}</td>
             <td class="col-acoes">
-              <a pButton icon="pi pi-pencil" style="margin: 1px;"></a>
-              <button pButton icon="pi pi-trash" style="margin: 1px;"></button>
+              <a pButton icon="pi pi-pencil" pTooltip="Editar" tooltipPosition="top" style="margin: 1px;"></a>
+              <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top" style="margin: 1px;"></button>
             </td>
           </tr>
         </ng-template>
