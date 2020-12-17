@@ -51,15 +51,15 @@
             </td>
             <td class="col-data">
               <span class="p-column-title">Vencimento</span>
-              {{ lancamento.dataVencimento }}
+              {{ lancamento.dataVencimento | date:'dd/MMy' }}
             </td>
             <td class="col-data">
               <span class="p-column-title">Pagamento</span>
-              {{ lancamento.dataPagamento }}
+              {{ lancamento.dataPagamento | date:'dd/MMy' }}
             </td>
             <td class="col-valor" [ngStyle]="{ color: lancamento.tipo === 'DESPESA' ? 'red' : 'blue'}">
               <span class="p-column-title">Valor</span>
-              {{ lancamento.valor }}
+              {{ lancamento.valor | number:'1.2-2'}}
             </td>
             <td class="col-acoes">
               <a pButton icon="pi pi-pencil" pTooltip="Editar" tooltipPosition="top" style="margin: 1px;"></a>
